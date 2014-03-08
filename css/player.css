@@ -1,0 +1,109 @@
+@charset"utf-8";
+
+/* CSS Document */
+ #player {
+    height:100%;
+    width:100%;
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+#player h1 {
+    font-size: 7%;
+    font-weight:normal;
+    padding:0;
+    margin:0;
+    letter-spacing: -.02em;
+}
+
+#player h2 {
+    font-size: 3%;
+    font-weight:normal;
+    font-style:italic;
+    padding:0;
+    margin:0;
+}
+
+#player #controlbox {
+    position: relative;
+    top: 0px;
+    height:100%;
+    width: 200px;
+    margin:0 auto;
+    font-size:5%;
+    cursor: pointer;
+    text-align:center;
+}
+
+#player #playerbutton {
+    height: 55%;
+    width: 75%;
+    background-color:#3560ff;
+    border-radius:7px;
+    padding:0 5% 0 5%;
+    border:none;
+    white-space:nowrap;
+    text-overflow: ellipsis;
+    overflow:hidden;
+    color:white;
+}
+#playerbutton:active {
+    background-color:#2b4dce !important;
+}
+#player #playicon {
+    background-repeat: no-repeat;
+    background-size:contain;
+    display:inline-block;
+    height:25%;
+    width:20%;
+    vertical-align: middle;
+    margin-right:7px;
+}
+#player .play {
+    background-image:url(../img/play.png);
+}
+#player .pause {
+    background-image:url(../img/pause.png);
+}
+#player #streamstatus {
+    letter-spacing: 0.09em;
+}
+#player #callbutton {
+    margin-top:8%;
+    height:55%;
+    width:20%;
+    background-color:white;
+    border-color:#e10000;
+    border-width:3px;
+    border-style: solid;
+    border-radius:7px;
+    padding:0 5% 0 5%;
+    white-space:nowrap;
+    text-overflow: ellipsis;
+    overflow:hidden;
+    color:#e10000;
+    font-size:70%
+}
+#callbutton:active {
+    background-color:#e10000 !important;
+    color:white !important;
+    border-width:0px !important;
+}
+#player #call {
+    background-image:url("../img/call_red.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+    display:inline-block;
+    height:70%;
+    width:30%;
+    vertical-align: middle;
+    margin-right:7px;
+}
+#callbutton:active #call {
+    background-image:url(../img/call_white.png) !important;
+}
+
+#player #calllabel {
+    letter-spacing: 0.09em;
+}
