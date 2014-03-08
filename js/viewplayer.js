@@ -5,5 +5,6 @@ var ViewPlayer = {
     logo:document.getElementById('logo'),
     playPauseButton:document.getElementById('playerbutton'),
     playPauseButtonIcon:document.getElementById('playicon'),
-    streamStatus:document.getElementById('streamstatus')
+    streamStatus:document.getElementById('streamstatus'),
+    callButton:document.getElementById('callbutton')
 }
