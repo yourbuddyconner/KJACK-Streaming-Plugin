@@ -67,6 +67,7 @@
 }
 #player #streamstatus {
     letter-spacing: 0.09em;
+	font-size: 14px;
 }
 #player #callbutton {
     margin-top:8%;
