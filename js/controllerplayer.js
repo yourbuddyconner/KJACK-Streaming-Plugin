@@ -12,7 +12,7 @@ var ControllerPlayer = (function () {
     var isError = false;
 
     // dom objects
-    var radioStream = ViewMain.streamAudio;
+    var radioStream = document.getElementById('streamaudio');
     var button = ViewPlayer.playPauseButtonIcon;
     var streamStatus = ViewPlayer.streamStatus;
 
@@ -22,9 +22,9 @@ var ControllerPlayer = (function () {
 
     // picks between the 2 stream sources
     var audioStreamPicker = function () {
-        if (window.isConnected === false) {
+        /*if (window.isConnected === false) {
             return false;
-        }
+        }*/
 
         var isStream64 = true;
         var isStream128 = true;
