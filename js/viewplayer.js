@@ -6,5 +6,7 @@ var ViewPlayer = {
     playPauseButton:document.getElementById('playerbutton'),
     playPauseButtonIcon:document.getElementById('playicon'),
     streamStatus:document.getElementById('streamstatus'),
-    callButton:document.getElementById('callbutton')
+    callButton:document.getElementById('callbutton'),
+    callButtonPic: document.getElementById('call'),
+    callButtonText: document.getElementById('calllabel')
 }

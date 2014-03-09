@@ -16,7 +16,9 @@
     
     window.addEventListener('click', function(event) {
 	    //call bitton
-	    if (event.target === ViewPlayer.callButton){
+	    if (event.target === ViewPlayer.callButton
+	    	|| event.target === ViewPlayer.callButtonText
+	    	|| event.target === ViewPlayer.callButtonPic) {
 		    console.log("call button pushed! Heck yes.");
 		    alert("call '(928)523-4554' to talk to KJACK!");
 	    }
