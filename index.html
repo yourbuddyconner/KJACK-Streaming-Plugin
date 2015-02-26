@@ -2,35 +2,54 @@
 <html>
     
     <head>
+        <title>KJACK Radio</title>    
         <meta charset="utf-8" />
-<!--         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />-->
-        <link type="text/css" rel="stylesheet" href="css/main.css" />
-        <link type="text/css" rel="stylesheet" href="css/player.css" />
-
-        <title>KJACK</title>
+        <!-- AngularJS -->
+        <script src="lib/angular.js"></script>
+        <!-- ngAudio -->
+        <script src="lib/angular.audio.js"></script>
+        <!-- angular ui-router -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.13/angular-ui-router.js"></script>
+        <!-- Firebase -->
+        <script src="https://cdn.firebase.com/js/client/1.0.21/firebase.js"></script>
+        <!-- AngularFire -->
+        <script src="https://cdn.firebase.com/libs/angularfire/0.8.2/angularfire.min.js"></script>
+        <!-- jQuery -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <!-- App Code -->
+        <script src="js/app.js"></script>
     </head>
     
-    <body>
-        <!-- two views: player and info -->
-        <section id="player" class="show">
-            <div id="controlbox">
-                <button id="playerbutton">
-                    <span id="playicon" class="play"></span>
-                    <span id="streamstatus">Play</span>
+    <body ng-app="kjack">
+        <section id="player" ng-controller="StreamCtrl" class="col-lg-3">
+            <div>
+                <button class="btn btn-primary btn-lg btn-block" ng-show="stream.paused" ng-click='stream.play()'>
+                    Play
+                    <span class="glyphicon glyphicon-play"></span>
                 </button>
-                <button id="callbutton">
-                    <span id="call"></span>
-                    <span id="calllabel">Call In</span>
+                <button class="btn btn-primary btn-lg btn-block" ng-show="!stream.paused" ng-click='stream.pause()'>
+                    Pause
+                    <span class="glyphicon glyphicon-pause"></span>
                 </button>
             </div>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="media" id="now-playing">
+                      <div class="media-left">
+                        <img ng-show="nowplaying.image_sm" class="media-object" style="width: 64px; height: 64px;"ng-src="{{nowplaying.image_sm}}">
+                        <img ng-show="!nowplaying.image_sm" class="media-object" style="width: 64px; height: 64px;" src="img/logo.png">
+                      </div>
+                      <div class="media-body">
+                        <h4 class="media-heading">{{nowplaying.title}}</h4>
+                        <h5 class="media-heading">{{nowplaying.artist}}</h5>
+                      </div>
+                    </div>
+                </div>
+            </div>
         </section>
-        <audio preload="auto" id="streamaudio"></audio>
-
-        <script src="js/layout.js"></script>
-        <script src="js/viewplayer.js"></script>
-        <script src="js/viewmain.js"></script>
-        <script src="js/controllerplayer.js"></script>
-        <script src="js/main.js"></script>
     </body>
 
 </html>
